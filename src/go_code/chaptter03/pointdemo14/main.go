@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*
 基本介绍:
@@ -19,4 +21,11 @@ func main() {
 	var ptr *int = &i
 	fmt.Printf("ptr: %v\n", ptr)
 	fmt.Printf("ptr指向的值: %v\n", *ptr)
+	fmt.Printf("i: %v\n", i)
+	*ptr = 11
+	fmt.Printf("i: %v\n", i)
+	//注:指针也区分类型  *类型A  要和 类型B&  对应
+	//值类型都有对应的指针类型
+	//值类型包括 基本数据类型 数组 和结构体
+	//引用类型 指针 slice 切片 map  管道 interface
 }
